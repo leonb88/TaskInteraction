@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3F68A1DA-EB71-4257-9226-38F3AB405D73</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TaskInteraction</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BD0BB601E84F686C06F37F4258ED35A78C8CE691</key>
+		<string>https://github.com/leonb88/TaskInteraction.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TaskInteraction.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BD0BB601E84F686C06F37F4258ED35A78C8CE691</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/leonb88/TaskInteraction.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BD0BB601E84F686C06F37F4258ED35A78C8CE691</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BD0BB601E84F686C06F37F4258ED35A78C8CE691</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TaskInteraction</string>
+		</dict>
+	</array>
+</dict>
+</plist>
