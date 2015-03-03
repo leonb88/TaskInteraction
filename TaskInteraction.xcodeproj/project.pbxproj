@@ -56,6 +56,8 @@
 		842424AF1A91402A008BB76F /* HSDatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842424AD1A91402A008BB76F /* HSDatePickerViewController.xib */; };
 		842424B21A914842008BB76F /* MMPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 842424B11A914842008BB76F /* MMPickerView.m */; };
 		842424B51A9291F7008BB76F /* MCSwipeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 842424B41A9291F7008BB76F /* MCSwipeTableViewCell.m */; };
+		842889001AA0513E0070C2EE /* minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 842888FE1AA0513E0070C2EE /* minus.png */; };
+		842889011AA0513E0070C2EE /* prus.png in Resources */ = {isa = PBXBuildFile; fileRef = 842888FF1AA0513E0070C2EE /* prus.png */; };
 		8446B1B51A92E22D0047A1FE /* recom.png in Resources */ = {isa = PBXBuildFile; fileRef = 8446B1B41A92E22D0047A1FE /* recom.png */; };
 		846491E11A93DB7D00AA8580 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846491DC1A93DB7D00AA8580 /* Bolts.framework */; };
 		846491E21A93DB7D00AA8580 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846491DD1A93DB7D00AA8580 /* Parse.framework */; };
@@ -78,6 +80,8 @@
 		849C260C1A94D28F007D03D4 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 849C260B1A94D28F007D03D4 /* MBProgressHUD.m */; };
 		849C260D1A9568ED007D03D4 /* RecommendedListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842424371A8F62D2008BB76F /* RecommendedListViewController.m */; };
 		84ACE2D21A9978BF0043C12E /* range.png in Resources */ = {isa = PBXBuildFile; fileRef = 84ACE2D11A9978BF0043C12E /* range.png */; };
+		84B3C4BD1AA0A09B007013D7 /* back_dis.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B3C4BB1AA0A09B007013D7 /* back_dis.png */; };
+		84B3C4BE1AA0A09B007013D7 /* back_en.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B3C4BC1AA0A09B007013D7 /* back_en.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -147,6 +151,8 @@
 		842424B11A914842008BB76F /* MMPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMPickerView.m; path = Base/MMPickerView.m; sourceTree = "<group>"; };
 		842424B31A9291F7008BB76F /* MCSwipeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCSwipeTableViewCell.h; path = Base/MCSwipeTableViewCell.h; sourceTree = "<group>"; };
 		842424B41A9291F7008BB76F /* MCSwipeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCSwipeTableViewCell.m; path = Base/MCSwipeTableViewCell.m; sourceTree = "<group>"; };
+		842888FE1AA0513E0070C2EE /* minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = minus.png; path = Resource/minus.png; sourceTree = "<group>"; };
+		842888FF1AA0513E0070C2EE /* prus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = prus.png; path = Resource/prus.png; sourceTree = "<group>"; };
 		8446B1B41A92E22D0047A1FE /* recom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recom.png; path = Resource/recom.png; sourceTree = "<group>"; };
 		846491DC1A93DB7D00AA8580 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		846491DD1A93DB7D00AA8580 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -169,6 +175,8 @@
 		849C260A1A94D28F007D03D4 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = Base/MBProgressHUD.h; sourceTree = "<group>"; };
 		849C260B1A94D28F007D03D4 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = Base/MBProgressHUD.m; sourceTree = "<group>"; };
 		84ACE2D11A9978BF0043C12E /* range.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = range.png; path = Resource/range.png; sourceTree = "<group>"; };
+		84B3C4BB1AA0A09B007013D7 /* back_dis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back_dis.png; path = Resource/back_dis.png; sourceTree = "<group>"; };
+		84B3C4BC1AA0A09B007013D7 /* back_en.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back_en.png; path = Resource/back_en.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +315,10 @@
 		8424242C1A8F5F42008BB76F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				84B3C4BB1AA0A09B007013D7 /* back_dis.png */,
+				84B3C4BC1AA0A09B007013D7 /* back_en.png */,
+				842888FE1AA0513E0070C2EE /* minus.png */,
+				842888FF1AA0513E0070C2EE /* prus.png */,
 				84ACE2D11A9978BF0043C12E /* range.png */,
 				849C26081A94BFE8007D03D4 /* back.png */,
 				849C26061A94605C007D03D4 /* edit.png */,
@@ -447,14 +459,17 @@
 				842424831A8FE991008BB76F /* trash_select.png in Resources */,
 				842424591A8FDB19008BB76F /* nonrec.png in Resources */,
 				8424247D1A8FE991008BB76F /* smile_select.png in Resources */,
+				842889011AA0513E0070C2EE /* prus.png in Resources */,
 				8424243E1A8F6A16008BB76F /* menu.png in Resources */,
 				842424841A8FE991008BB76F /* trash.png in Resources */,
 				842424721A8FE991008BB76F /* cancel.png in Resources */,
 				8424243F1A8F6A16008BB76F /* reshuffle.png in Resources */,
+				842889001AA0513E0070C2EE /* minus.png in Resources */,
 				84ACE2D21A9978BF0043C12E /* range.png in Resources */,
 				842424741A8FE991008BB76F /* check_non.png in Resources */,
 				842424791A8FE991008BB76F /* effort.png in Resources */,
 				849C26091A94BFE8007D03D4 /* back.png in Resources */,
+				84B3C4BE1AA0A09B007013D7 /* back_en.png in Resources */,
 				842424431A8F7863008BB76F /* full.png in Resources */,
 				842424801A8FE991008BB76F /* social.png in Resources */,
 				8424240D1A8F5E09008BB76F /* Main.storyboard in Resources */,
@@ -473,6 +488,7 @@
 				8424247C1A8FE991008BB76F /* repeat.png in Resources */,
 				842424451A8F7863008BB76F /* slidemenu.png in Resources */,
 				842424441A8F7863008BB76F /* recommended.png in Resources */,
+				84B3C4BD1AA0A09B007013D7 /* back_dis.png in Resources */,
 				842424811A8FE991008BB76F /* tags.png in Resources */,
 				842424921A903F29008BB76F /* watch.png in Resources */,
 				8424248F1A903F29008BB76F /* complete.png in Resources */,
@@ -610,7 +626,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: RI ETSUKO (L8R4BT8FTN)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: RI ETSUKO (L8R4BT8FTN)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -628,7 +644,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: RI ETSUKO (L8R4BT8FTN)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: RI ETSUKO (L8R4BT8FTN)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

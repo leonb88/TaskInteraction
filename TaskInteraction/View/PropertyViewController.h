@@ -1,10 +1,4 @@
-//
-//  PropertyViewController.h
-//  TaskInteraction
-//
-//  Created by Vallis Durand on 14/02/15.
-//  Copyright (c) 2015 Vallis Durand. All rights reserved.
-//
+
 
 #import <UIKit/UIKit.h>
 
@@ -21,24 +15,20 @@
 @property (nonatomic,readwrite) NSInteger v_RecurringType;
 
 //Controll
+@property (weak, nonatomic) IBOutlet UITextView *v_notesTxt;
 @property (weak, nonatomic) IBOutlet UITextField *v_taskNameTxt;
 @property (weak, nonatomic) IBOutlet UIScrollView *v_scrollView;
 @property (weak, nonatomic) IBOutlet UITextField *v_tagsTxt;
 @property (weak, nonatomic) IBOutlet UIButton *v_datepickBtn;
 @property (weak, nonatomic) IBOutlet UILabel *v_duetimeLb;
-@property (weak, nonatomic) IBOutlet UITextField *v_notesTxt;
 @property (weak, nonatomic) IBOutlet UIView *v_repeatsettingView;
 @property (weak, nonatomic) IBOutlet UIImageView *v_repeatframeLineImg;
 @property (weak, nonatomic) IBOutlet UIButton *v_repeatcontrollBtn;
-@property (weak, nonatomic) IBOutlet UIButton *v_importantBtn;
-@property (weak, nonatomic) IBOutlet UIButton *v_effortBtn;
-@property (weak, nonatomic) IBOutlet UIButton *v_enjoyBtn;
-@property (weak, nonatomic) IBOutlet UIButton *v_socialBtn;
+@property (weak, nonatomic) IBOutlet UISlider *v_importantSlider;
+@property (weak, nonatomic) IBOutlet UISlider *v_effortSlider;
+@property (weak, nonatomic) IBOutlet UISlider *v_enjoySlider;
+@property (weak, nonatomic) IBOutlet UISlider *v_socialSlider;
 
-- (IBAction)vimport:(UIButton *)sender;
-- (IBAction)veffort:(UIButton *)sender;
-- (IBAction)vsmile:(UIButton *)sender;
-- (IBAction)vsocial:(UIButton *)sender;
 - (IBAction)vclock:(UIButton *)sender;
 - (IBAction)vdatepick:(UIButton *)sender;
 - (IBAction)vrepeat:(UIButton *)sender;

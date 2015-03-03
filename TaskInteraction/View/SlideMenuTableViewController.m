@@ -1,10 +1,3 @@
-//
-//  SlideMenuTableViewController.m
-//  TaskInteraction
-//
-//  Created by Vallis Durand on 14/02/15.
-//  Copyright (c) 2015 Vallis Durand. All rights reserved.
-//
 
 #import "SlideMenuTableViewController.h"
 #import "RecommendedListViewController.h"

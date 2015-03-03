@@ -1,28 +1,4 @@
-/*
 
- Copyright (c) 2013 Joan Lluch <joan.lluch@sweetwilliamsl.com>
- 
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is furnished
- to do so, subject to the following conditions:
- 
- The above copyright notice and this permission notice shall be included in all
- copies or substantial portions of the Software.
- 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- THE SOFTWARE.
-
- Early code inspired on a similar class by Philip Kluz (Philip.Kluz@zuui.org)
- 
-*/
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -1845,55 +1821,5 @@ NSString * const SWSegueRightIdentifier = @"sw_right";
 @end
 
 
-//#pragma mark - SWRevealViewControllerSegue Class
-//
-//@implementation SWRevealViewControllerSegue  // DEPRECATED
-//
-//- (void)perform
-//{
-//    if ( _performBlock )
-//        _performBlock( self, self.sourceViewController, self.destinationViewController );
-//}
-//
-//@end
-//
-//
-//#pragma mark Storyboard support
-//
-//@implementation SWRevealViewController(deprecated)
-//
-//- (void)prepareForSegue:(SWRevealViewControllerSegue *)segue sender:(id)sender   // TO REMOVE: DEPRECATED IMPLEMENTATION
-//{
-//    // This method is required for compatibility with SWRevealViewControllerSegue, now deprecated.
-//    // It can be simply removed when using SWRevealViewControllerSegueSetController and SWRevealViewControlerSeguePushController
-//    
-//    NSString *identifier = segue.identifier;
-//    if ( [segue isKindOfClass:[SWRevealViewControllerSegue class]] && sender == nil )
-//    {
-//        if ( [identifier isEqualToString:SWSegueRearIdentifier] )
-//        {
-//            segue.performBlock = ^(SWRevealViewControllerSegue* rvc_segue, UIViewController* svc, UIViewController* dvc)
-//            {
-//                [self _setRearViewController:dvc animated:NO];
-//            };
-//        }
-//        else if ( [identifier isEqualToString:SWSegueFrontIdentifier] )
-//        {
-//            segue.performBlock = ^(SWRevealViewControllerSegue* rvc_segue, UIViewController* svc, UIViewController* dvc)
-//            {
-//                [self _setFrontViewController:dvc animated:NO];
-//            };
-//        }
-//        else if ( [identifier isEqualToString:SWSegueRightIdentifier] )
-//        {
-//            segue.performBlock = ^(SWRevealViewControllerSegue* rvc_segue, UIViewController* svc, UIViewController* dvc)
-//            {
-//                [self _setRightViewController:dvc animated:NO];
-//            };
-//        }
-//    }
-//}
-//
-//@end
 
 

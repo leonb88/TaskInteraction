@@ -1,10 +1,4 @@
-//
-//  TaskListModel.h
-//  TaskInteraction
-//
-//  Created by Vallis Durand on 14/02/15.
-//  Copyright (c) 2015 Vallis Durand. All rights reserved.
-//
+
 
 #import <Foundation/Foundation.h>
 #import "Constants.h"
@@ -28,9 +22,9 @@
 +(NSString *)getCurrentKey;
 +(void)removeObjectForKey:(NSString *)key taskName:(NSString *)name;
 
-+(void)setTask:(NSString *)taskName importantAttr:(BOOL)importantAttr effortAttr:(BOOL)effortAttr enjoyAttr:(BOOL)enjoyAttr socialAttr:(BOOL)socialAttr tags:(NSString *)tags deadlineDate:(NSDate *)deadlineDate dueTime:(NSString *)dueTime repeatType:(NSInteger)repeatType notes:(NSString *)notes forKey:(NSString *)key originTaskName:(NSString *)originTaskName;
++(void)setTask:(NSString *)taskName importantAttr:(NSInteger)importantAttr effortAttr:(NSInteger)effortAttr enjoyAttr:(NSInteger)enjoyAttr socialAttr:(NSInteger)socialAttr tags:(NSString *)tags deadlineDate:(NSDate *)deadlineDate dueTime:(NSString *)dueTime repeatType:(NSInteger)repeatType notes:(NSString *)notes forKey:(NSString *)key originTaskName:(NSString *)originTaskName;
 
-+(void)setTaskForCurrentKey:(NSString *)taskName importantAttr:(BOOL)importantAttr effortAttr:(BOOL)effortAttr enjoyAttr:(BOOL)enjoyAttr socialAttr:(BOOL)socialAttr tags:(NSString *)tags deadlineDate:(NSDate *)deadlineDate dueTime:(NSString *)dueTime repeatType:(NSInteger)repeatType notes:(NSString *)notes originTaskName:(NSString *)originTaskName;
++(void)setTaskForCurrentKey:(NSString *)taskName importantAttr:(NSInteger)importantAttr effortAttr:(NSInteger)effortAttr enjoyAttr:(NSInteger)enjoyAttr socialAttr:(NSInteger)socialAttr tags:(NSString *)tags deadlineDate:(NSDate *)deadlineDate dueTime:(NSString *)dueTime repeatType:(NSInteger)repeatType notes:(NSString *)notes originTaskName:(NSString *)originTaskName;
 
 +(void)saveTasks;
 @end

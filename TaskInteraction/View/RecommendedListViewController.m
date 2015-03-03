@@ -17,6 +17,8 @@
 @end
 @implementation RecommendedListViewController
 @synthesize v_dateBtn,v_reshuffleBtn;
+
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];
@@ -30,6 +32,22 @@
     UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 600, 600)];
     [backgroundView setBackgroundColor:[UIColor colorWithRed:227.0 / 255.0 green:227.0 / 255.0 blue:227.0 / 255.0 alpha:1.0]];
     [self.v_rectableView setBackgroundView:backgroundView];
+    [self addObserver];
+}
+
+- (void) addObserver {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(setViewState)
+                                                 name:@"ViewFullState"
+                                               object:nil];
+}
+
+- (void) setViewState {
+    self.v_ViewState = YES;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
     if (self.v_ViewState == YES) {
         self.title = @"Full List";
         UIButton *v_nonrecBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 25, 25)];
@@ -37,6 +55,7 @@
         [v_nonrecBtn addTarget:self action:@selector(vnonrecommendedDisplay:) forControlEvents:UIControlEventTouchUpInside];
         UIBarButtonItem *v_nonRecommended = [[UIBarButtonItem alloc] initWithCustomView:v_nonrecBtn];
         [self.navigationItem setRightBarButtonItem:v_nonRecommended];
+        [self vmakeTaskObject];
     }else{
         self.title = @"Recommended List";
         v_reshuffleBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
@@ -44,16 +63,10 @@
         [v_reshuffleBtn addTarget:self action:@selector(vreshuffle) forControlEvents:UIControlEventTouchUpInside];
         UIBarButtonItem *v_reshuffle = [[UIBarButtonItem alloc] initWithCustomView:v_reshuffleBtn];
         [self.navigationItem setRightBarButtonItem:v_reshuffle];
-    }
-}
-- (void)viewWillAppear:(BOOL)animated
-{
-    if (self.v_ViewState == YES) {
-         [self vmakeTaskObject];
-    }else{
          [self vrecommendedDisplay];
     }
 }
+
 - (void)vrecommendedDisplay
 {
     NSMutableArray *array =
@@ -61,7 +74,7 @@
     self.v_recommendArray = [[NSMutableArray alloc]init];
     for (int i = 0; i < [array count]; i ++) {
         NSString * key =  [array objectAtIndex:i];
-        if ([[[TaskListModel getAllTaskImportantAttr]objectForKey:key]boolValue] == YES || [[[TaskListModel getAllTaskEffortAttr]objectForKey:key]boolValue] == YES || [[[TaskListModel getAllTaskSocialAttr]objectForKey:key]boolValue] == YES || [[[TaskListModel getAllTaskEnjoyAttr]objectForKey:key]boolValue] == YES) {
+        if ([[[TaskListModel getAllTaskImportantAttr]objectForKey:key]intValue] > 0 || [[[TaskListModel getAllTaskEffortAttr]objectForKey:key]intValue] > 0 || [[[TaskListModel getAllTaskSocialAttr]objectForKey:key]intValue] > 0 || [[[TaskListModel getAllTaskEnjoyAttr]objectForKey:key]intValue] > 0) {
             [self.v_recommendArray addObject:key];
             }else{
          }
@@ -79,7 +92,7 @@
         NSMutableArray *norecArray = [[NSMutableArray alloc]init];
         for (int i = 0; i < [ self.v_fullArray count]; i ++) {
             NSString * key =  [self.v_fullArray objectAtIndex:i];
-            if ([[[TaskListModel getAllTaskImportantAttr]objectForKey:key]boolValue] == NO && [[[TaskListModel getAllTaskEffortAttr]objectForKey:key]boolValue] == NO && [[[TaskListModel getAllTaskSocialAttr]objectForKey:key]boolValue] == NO && [[[TaskListModel getAllTaskEnjoyAttr]objectForKey:key]boolValue] == NO) {
+            if ([[[TaskListModel getAllTaskImportantAttr]objectForKey:key]intValue] <= 0 && [[[TaskListModel getAllTaskEffortAttr]objectForKey:key]intValue] <= 0 && [[[TaskListModel getAllTaskSocialAttr]objectForKey:key]intValue] <= 0 && [[[TaskListModel getAllTaskEnjoyAttr]objectForKey:key]intValue] <= 0) {
                 count ++;
                 [norecArray addObject:key];
             }else{
@@ -148,9 +161,9 @@
         cell = [[MCSwipeTableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         
     }
-    UIImageView *edit = [[UIImageView alloc]initWithFrame:CGRectMake(280, 20, 20, 20)];
-    edit.image = [UIImage imageNamed:@"edit.png"];
-    [cell addSubview:edit];
+//    UIImageView *edit = [[UIImageView alloc]initWithFrame:CGRectMake(280, 20, 20, 20)];
+//    edit.image = [UIImage imageNamed:@"edit.png"];
+//    [cell addSubview:edit];
     [self configureCell:cell forRowAtIndexPath:indexPath];
     return cell;
 }

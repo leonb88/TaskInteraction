@@ -1,10 +1,3 @@
-//
-//  TaskListModel.m
-//  TaskInteraction
-//
-//  Created by Vallis Durand on 14/02/15.
-//  Copyright (c) 2015 Vallis Durand. All rights reserved.
-//
 
 #import "TaskListModel.h"
 #import <Parse/Parse.h>
@@ -130,13 +123,13 @@ static TaskListModel *instanceOfTaskList = nil;
 }
 
 //ParseCom Add Operation
-+(void)setTask:(NSString *)taskName importantAttr:(BOOL)importantAttr effortAttr:(BOOL)effortAttr enjoyAttr:(BOOL)enjoyAttr socialAttr:(BOOL)socialAttr tags:(NSString *)tags deadlineDate:(NSDate *)deadlineDate dueTime:(NSString *)dueTime repeatType:(NSInteger)repeatType notes:(NSString *)notes forKey:(NSString *)key originTaskName:(NSString *)originTaskName{
++(void)setTask:(NSString *)taskName importantAttr:(NSInteger)importantAttr effortAttr:(NSInteger)effortAttr enjoyAttr:(NSInteger)enjoyAttr socialAttr:(NSInteger)socialAttr tags:(NSString *)tags deadlineDate:(NSDate *)deadlineDate dueTime:(NSString *)dueTime repeatType:(NSInteger)repeatType notes:(NSString *)notes forKey:(NSString *)key originTaskName:(NSString *)originTaskName{
     
     [allTaskNames setObject:taskName forKey:key];
-    [allTaskImportantAttrs setObject:[NSNumber numberWithBool:importantAttr] forKey:key];
-    [allTaskEffortAttrs setObject:[NSNumber numberWithBool:effortAttr] forKey:key];
-    [allTaskEnjoyAttrs setObject:[NSNumber numberWithBool:enjoyAttr] forKey:key];
-    [allTaskSocialAttrs setObject:[NSNumber numberWithBool:socialAttr] forKey:key];
+    [allTaskImportantAttrs setObject:[NSNumber numberWithInt:importantAttr] forKey:key];
+    [allTaskEffortAttrs setObject:[NSNumber numberWithInt:effortAttr] forKey:key];
+    [allTaskEnjoyAttrs setObject:[NSNumber numberWithInt:enjoyAttr] forKey:key];
+    [allTaskSocialAttrs setObject:[NSNumber numberWithInt:socialAttr] forKey:key];
     [allTaskTags setObject:tags forKey:key];
     [allTaskDeadlineDates setObject:deadlineDate forKey:key];
     [allTaskDueTimes setObject:dueTime forKey:key];
@@ -149,10 +142,10 @@ static TaskListModel *instanceOfTaskList = nil;
             for (PFObject *object in objects) {
                 if ([object[@"task_name"] isEqualToString:originTaskName]) {
                     object[@"task_name"] = taskName;
-                    object[@"important_attribute"] = [NSNumber numberWithBool:importantAttr];
-                    object[@"effort_attribute"] = [NSNumber numberWithBool:effortAttr];
-                    object[@"enjoy_attribute"] = [NSNumber numberWithBool:enjoyAttr];
-                    object[@"social_attribute"] = [NSNumber numberWithBool:socialAttr];
+                    object[@"important_attribute"] = [NSNumber numberWithInt:importantAttr];
+                    object[@"effort_attribute"] = [NSNumber numberWithInt:effortAttr];
+                    object[@"enjoy_attribute"] = [NSNumber numberWithInt:enjoyAttr];
+                    object[@"social_attribute"] = [NSNumber numberWithInt:socialAttr];
                     object[@"tags"] = tags;
                     object[@"due_deadline"] = deadlineDate;
                     object[@"estimate_due"] = dueTime;
@@ -182,16 +175,16 @@ static TaskListModel *instanceOfTaskList = nil;
     [[NSUserDefaults standardUserDefaults] setObject:allTaskNotes forKey:kAllTaskNote];
 }
 
-+(void)setTaskForCurrentKey:(NSString *)taskName importantAttr:(BOOL)importantAttr effortAttr:(BOOL)effortAttr enjoyAttr:(BOOL)enjoyAttr socialAttr:(BOOL)socialAttr tags:(NSString *)tags deadlineDate:(NSDate *)deadlineDate dueTime:(NSString *)dueTime repeatType:(NSInteger)repeatType notes:(NSString *)notes originTaskName:(NSString *)originTaskName
++(void)setTaskForCurrentKey:(NSString *)taskName importantAttr:(NSInteger)importantAttr effortAttr:(NSInteger)effortAttr enjoyAttr:(NSInteger)enjoyAttr socialAttr:(NSInteger)socialAttr tags:(NSString *)tags deadlineDate:(NSDate *)deadlineDate dueTime:(NSString *)dueTime repeatType:(NSInteger)repeatType notes:(NSString *)notes originTaskName:(NSString *)originTaskName
 {
     [self setTask:taskName importantAttr:importantAttr effortAttr:effortAttr enjoyAttr:enjoyAttr socialAttr:socialAttr tags:tags deadlineDate:deadlineDate dueTime:dueTime repeatType:repeatType notes:notes forKey:currentKey originTaskName:originTaskName];
   //ParseCom ADD
     PFObject *addObj = [PFObject objectWithClassName:@"TaskInteraction"];
     addObj[@"task_name"] = taskName;
-    addObj[@"important_attribute"] = [NSNumber numberWithBool:importantAttr];
-    addObj[@"effort_attribute"] = [NSNumber numberWithBool:effortAttr];
-    addObj[@"enjoy_attribute"] = [NSNumber numberWithBool:enjoyAttr];
-    addObj[@"social_attribute"] = [NSNumber numberWithBool:socialAttr];
+    addObj[@"important_attribute"] = [NSNumber numberWithInt:importantAttr];
+    addObj[@"effort_attribute"] = [NSNumber numberWithInt:effortAttr];
+    addObj[@"enjoy_attribute"] = [NSNumber numberWithInt:enjoyAttr];
+    addObj[@"social_attribute"] = [NSNumber numberWithInt:socialAttr];
     addObj[@"tags"] = tags;
     addObj[@"due_deadline"] = deadlineDate;
     addObj[@"estimate_due"] = dueTime;
